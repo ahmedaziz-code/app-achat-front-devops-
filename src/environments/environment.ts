@@ -4,8 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: window['env']["apiUrl"] || "http://localhos:8089/",
-  debug: window['env']["debug"] || false
+  apiUrl: 'http://192.168.1.5:8089/SpringMVC/'
 }
 
 /*
