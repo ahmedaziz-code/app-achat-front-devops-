@@ -6,7 +6,7 @@ import {HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class ReglementService {
-  readonly API_URL = environment.backendUrl+'reglement';
+  readonly API_URL = environment.apiUrl+'reglement';
 
   constructor(private httpClient: HttpClient) {
   }

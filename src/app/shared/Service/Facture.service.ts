@@ -6,7 +6,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class FactureService {
-  readonly API_URL = environment.backendUrl+'facture';
+  readonly API_URL = environment.apiUrl+'facture';
 
   constructor(private httpClient: HttpClient) { }
 

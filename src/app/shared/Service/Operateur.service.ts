@@ -6,7 +6,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class OperateurService {
-  readonly API_URL = environment.backendUrl+'operateur';
+  readonly API_URL = environment.apiUrl+'operateur';
 
   constructor(private httpClient: HttpClient) { }
 
