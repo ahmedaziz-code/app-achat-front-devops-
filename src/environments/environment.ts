@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  backendUrl : 'app_achat_back:8089/SpringMVC/'
+  apiUrl: window['env']["apiUrl"] || "http://localhos:8089/",
+  debug: window['env']["debug"] || false
 }
 
 /*
