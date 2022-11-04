@@ -1,0 +1,39 @@
+pipeline {
+    agent any
+
+    tools {
+        nodejs 'NODE_HOME'
+    }
+    
+
+    stages {
+        stage('Getting project from Github') {
+            steps {
+                git branch : 'main' ,
+                    url : 'https://github.com/ahmedaziz-code/achat-front.git';
+            }
+        }
+        stage('Install') {
+            steps { 
+                sh 'npm install'
+            }
+        }
+        stage('Build') {
+          steps { 
+              sh 'npm run build'
+              }
+        }
+        
+        stage ('Build our image'){
+            steps{
+                sh 'sudo docker build  -t ahmedazizelj/achat_front .'
+            }
+        }
+        stage ('Deploy our image'){
+            steps{
+                sh 'sudo docker login -u ahmedazizelj -p azizaziz1';
+                sh 'sudo docker push ahmedazizelj/achat_front'
+                }
+            }
+    }
+}
