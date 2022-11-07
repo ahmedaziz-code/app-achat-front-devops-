@@ -25,6 +25,7 @@ export class OperateurComponent implements OnInit {
       nom:null,
       prenom:null,
       password:null
+      //I htins is works i don't know
     }
   }
 
